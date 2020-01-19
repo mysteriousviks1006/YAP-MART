@@ -11,7 +11,7 @@ export default class Copyright extends Component {
                             <p className="copyright">YAP MART © 2019-2020 yapmart.com. All rights reserved.</p>
                         </div>
                         <div className="col-md-4 col-sm-4 col-xs-12">
-                            <p className="designby">Design by: <a href="#">yapmart.com</a></p>
+                            <p className="designby">Design by: <a href="#">YAP-G Solutions</a></p>
                         </div>
                         </div>
                     </div>

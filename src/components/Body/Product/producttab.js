@@ -1,7 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import productData from './productdata';
+import Product from './product';
 
 export default class ProductTab extends Component {
     render() {
+        const productComponents = productData.map(product => <Product key={product.id} imgurl={product.imgurl} discount={product.discount} orig={product.orig} /> )
         return (
             <div>
                  <div className="product-tab-ajax">
@@ -19,10 +22,10 @@ export default class ProductTab extends Component {
                             <div className="clearfix">
                                 <div className="item-product-ajax item-product">
                                 <div className="product-thumb">
-                                    <a href="detail.html" className="product-thumb-link">
-                                    <img src="images/photos/fashion/1.jpg" alt />
+                                    <a href="details.js" className="product-thumb-link">
+                                    {productComponents.imgurl}
                                     </a>
-                                    <a href="quick-view.html" className="quickview-link plus fancybox.iframe">quick view</a>
+                                    <a href="quick-views.js" className="quickview-link plus fancybox.iframe">quick view</a>
                                     <div className="product-extra-link">
                                     <a href="#" className="addcart-link"><i className="fa fa-shopping-basket" aria-hidden="true" /></a>
                                     <a href="#" className="wishlist-link"><i className="fa fa-heart" aria-hidden="true" /></a>
@@ -30,19 +33,19 @@ export default class ProductTab extends Component {
                                     </div>
                                 </div>
                                 <div className="product-info">
-                                    <h3 className="product-title"><a href="detail.html">new favorite</a></h3>
+                                    <h3 className="product-title"><a href="details.js">new favorite</a></h3>
                                     <div className="product-price">
-                                    <del><span>$400.00</span></del>
-                                    <ins><span>$360.00</span></ins>
+                                    <del><span>{productComponents.discount}</span></del>
+                                    <ins><span>{productComponents.orig}</span></ins>
                                     </div>
                                 </div>
                                 </div>
                                 <div className="item-product-ajax item-product">
                                 <div className="product-thumb">
-                                    <a href="detail.html" className="product-thumb-link">
+                                    <a href="details.js" className="product-thumb-link">
                                     <img src="images/photos/fashion/2.jpg" alt />
                                     </a>
-                                    <a href="quick-view.html" className="quickview-link plus fancybox.iframe">quick view</a>
+                                    <a href="quick-views.js" className="quickview-link plus fancybox.iframe">quick view</a>
                                     <div className="product-extra-link">
                                     <a href="#" className="addcart-link"><i className="fa fa-shopping-basket" aria-hidden="true" /></a>
                                     <a href="#" className="wishlist-link"><i className="fa fa-heart" aria-hidden="true" /></a>
@@ -50,7 +53,7 @@ export default class ProductTab extends Component {
                                     </div>
                                 </div>
                                 <div className="product-info">
-                                    <h3 className="product-title"><a href="detail.html">new favorite</a></h3>
+                                    <h3 className="product-title"><a href="details.js">new favorite</a></h3>
                                     <div className="product-price">
                                     <del><span>$400.00</span></del>
                                     <ins><span>$360.00</span></ins>
@@ -59,10 +62,10 @@ export default class ProductTab extends Component {
                                 </div>
                                 <div className="item-product-ajax item-product">
                                 <div className="product-thumb">
-                                    <a href="detail.html" className="product-thumb-link">
+                                    <a href="details.js" className="product-thumb-link">
                                     <img src="images/photos/fashion/10.jpg" alt />
                                     </a>
-                                    <a href="quick-view.html" className="quickview-link plus fancybox.iframe">quick view</a>
+                                    <a href="quick-views.js" className="quickview-link plus fancybox.iframe">quick view</a>
                                     <div className="product-extra-link">
                                     <a href="#" className="addcart-link"><i className="fa fa-shopping-basket" aria-hidden="true" /></a>
                                     <a href="#" className="wishlist-link"><i className="fa fa-heart" aria-hidden="true" /></a>
@@ -70,7 +73,7 @@ export default class ProductTab extends Component {
                                     </div>
                                 </div>
                                 <div className="product-info">
-                                    <h3 className="product-title"><a href="detail.html">new favorite</a></h3>
+                                    <h3 className="product-title"><a href="details.js">new favorite</a></h3>
                                     <div className="product-price">
                                     <del><span>$400.00</span></del>
                                     <ins><span>$360.00</span></ins>
@@ -79,10 +82,10 @@ export default class ProductTab extends Component {
                                 </div>
                                 <div className="item-product-ajax item-product">
                                 <div className="product-thumb">
-                                    <a href="detail.html" className="product-thumb-link">
+                                    <a href="details.js" className="product-thumb-link">
                                     <img src="images/photos/fashion/3.jpg" alt />
                                     </a>
-                                    <a href="quick-view.html" className="quickview-link plus fancybox.iframe">quick view</a>
+                                    <a href="quick-views.js" className="quickview-link plus fancybox.iframe">quick view</a>
                                     <div className="product-extra-link">
                                     <a href="#" className="addcart-link"><i className="fa fa-shopping-basket" aria-hidden="true" /></a>
                                     <a href="#" className="wishlist-link"><i className="fa fa-heart" aria-hidden="true" /></a>
@@ -90,7 +93,7 @@ export default class ProductTab extends Component {
                                     </div>
                                 </div>
                                 <div className="product-info">
-                                    <h3 className="product-title"><a href="detail.html">new favorite</a></h3>
+                                    <h3 className="product-title"><a href="details.js">new favorite</a></h3>
                                     <div className="product-price">
                                     <del><span>$400.00</span></del>
                                     <ins><span>$360.00</span></ins>
@@ -99,10 +102,10 @@ export default class ProductTab extends Component {
                                 </div>
                                 <div className="item-product-ajax item-product">
                                 <div className="product-thumb">
-                                    <a href="detail.html" className="product-thumb-link">
+                                    <a href="details.js" className="product-thumb-link">
                                     <img src="images/photos/fashion/4.jpg" alt />
                                     </a>
-                                    <a href="quick-view.html" className="quickview-link plus fancybox.iframe">quick view</a>
+                                    <a href="quick-views.js" className="quickview-link plus fancybox.iframe">quick view</a>
                                     <div className="product-extra-link">
                                     <a href="#" className="addcart-link"><i className="fa fa-shopping-basket" aria-hidden="true" /></a>
                                     <a href="#" className="wishlist-link"><i className="fa fa-heart" aria-hidden="true" /></a>
@@ -110,7 +113,7 @@ export default class ProductTab extends Component {
                                     </div>
                                 </div>
                                 <div className="product-info">
-                                    <h3 className="product-title"><a href="detail.html">new favorite</a></h3>
+                                    <h3 className="product-title"><a href="details.js">new favorite</a></h3>
                                     <div className="product-price">
                                     <del><span>$400.00</span></del>
                                     <ins><span>$360.00</span></ins>
@@ -125,10 +128,10 @@ export default class ProductTab extends Component {
                             <div className="clearfix">
                                 <div className="item-product-ajax item-product">
                                 <div className="product-thumb">
-                                    <a href="detail.html" className="product-thumb-link">
+                                    <a href="details.js" className="product-thumb-link">
                                     <img src="images/photos/electronics/1.jpg" alt />
                                     </a>
-                                    <a href="quick-view.html" className="quickview-link plus fancybox.iframe">quick view</a>
+                                    <a href="quick-views.js" className="quickview-link plus fancybox.iframe">quick view</a>
                                     <div className="product-extra-link">
                                     <a href="#" className="addcart-link"><i className="fa fa-shopping-basket" aria-hidden="true" /></a>
                                     <a href="#" className="wishlist-link"><i className="fa fa-heart" aria-hidden="true" /></a>
@@ -136,7 +139,7 @@ export default class ProductTab extends Component {
                                     </div>
                                 </div>
                                 <div className="product-info">
-                                    <h3 className="product-title"><a href="detail.html">new favorite</a></h3>
+                                    <h3 className="product-title"><a href="details.js">new favorite</a></h3>
                                     <div className="product-price">
                                     <del><span>$400.00</span></del>
                                     <ins><span>$360.00</span></ins>
@@ -145,10 +148,10 @@ export default class ProductTab extends Component {
                                 </div>
                                 <div className="item-product-ajax item-product">
                                 <div className="product-thumb">
-                                    <a href="detail.html" className="product-thumb-link">
+                                    <a href="details.js" className="product-thumb-link">
                                     <img src="images/photos/electronics/2.jpg" alt />
                                     </a>
-                                    <a href="quick-view.html" className="quickview-link plus fancybox.iframe">quick view</a>
+                                    <a href="quick-views.js" className="quickview-link plus fancybox.iframe">quick view</a>
                                     <div className="product-extra-link">
                                     <a href="#" className="addcart-link"><i className="fa fa-shopping-basket" aria-hidden="true" /></a>
                                     <a href="#" className="wishlist-link"><i className="fa fa-heart" aria-hidden="true" /></a>
@@ -156,7 +159,7 @@ export default class ProductTab extends Component {
                                     </div>
                                 </div>
                                 <div className="product-info">
-                                    <h3 className="product-title"><a href="detail.html">new favorite</a></h3>
+                                    <h3 className="product-title"><a href="details.js">new favorite</a></h3>
                                     <div className="product-price">
                                     <del><span>$400.00</span></del>
                                     <ins><span>$360.00</span></ins>
@@ -165,10 +168,10 @@ export default class ProductTab extends Component {
                                 </div>
                                 <div className="item-product-ajax item-product">
                                 <div className="product-thumb">
-                                    <a href="detail.html" className="product-thumb-link">
+                                    <a href="details.js" className="product-thumb-link">
                                     <img src="images/photos/electronics/10.jpg" alt />
                                     </a>
-                                    <a href="quick-view.html" className="quickview-link plus fancybox.iframe">quick view</a>
+                                    <a href="quick-views.js" className="quickview-link plus fancybox.iframe">quick view</a>
                                     <div className="product-extra-link">
                                     <a href="#" className="addcart-link"><i className="fa fa-shopping-basket" aria-hidden="true" /></a>
                                     <a href="#" className="wishlist-link"><i className="fa fa-heart" aria-hidden="true" /></a>
@@ -176,7 +179,7 @@ export default class ProductTab extends Component {
                                     </div>
                                 </div>
                                 <div className="product-info">
-                                    <h3 className="product-title"><a href="detail.html">new favorite</a></h3>
+                                    <h3 className="product-title"><a href="details.js">new favorite</a></h3>
                                     <div className="product-price">
                                     <del><span>$400.00</span></del>
                                     <ins><span>$360.00</span></ins>
@@ -185,10 +188,10 @@ export default class ProductTab extends Component {
                                 </div>
                                 <div className="item-product-ajax item-product">
                                 <div className="product-thumb">
-                                    <a href="detail.html" className="product-thumb-link">
+                                    <a href="details.js" className="product-thumb-link">
                                     <img src="images/photos/electronics/3.jpg" alt />
                                     </a>
-                                    <a href="quick-view.html" className="quickview-link plus fancybox.iframe">quick view</a>
+                                    <a href="quick-views.js" className="quickview-link plus fancybox.iframe">quick view</a>
                                     <div className="product-extra-link">
                                     <a href="#" className="addcart-link"><i className="fa fa-shopping-basket" aria-hidden="true" /></a>
                                     <a href="#" className="wishlist-link"><i className="fa fa-heart" aria-hidden="true" /></a>
@@ -196,7 +199,7 @@ export default class ProductTab extends Component {
                                     </div>
                                 </div>
                                 <div className="product-info">
-                                    <h3 className="product-title"><a href="detail.html">new favorite</a></h3>
+                                    <h3 className="product-title"><a href="details.js">new favorite</a></h3>
                                     <div className="product-price">
                                     <del><span>$400.00</span></del>
                                     <ins><span>$360.00</span></ins>
@@ -205,10 +208,10 @@ export default class ProductTab extends Component {
                                 </div>
                                 <div className="item-product-ajax item-product">
                                 <div className="product-thumb">
-                                    <a href="detail.html" className="product-thumb-link">
+                                    <a href="details.js" className="product-thumb-link">
                                     <img src="images/photos/electronics/4.jpg" alt />
                                     </a>
-                                    <a href="quick-view.html" className="quickview-link plus fancybox.iframe">quick view</a>
+                                    <a href="quick-views.js" className="quickview-link plus fancybox.iframe">quick view</a>
                                     <div className="product-extra-link">
                                     <a href="#" className="addcart-link"><i className="fa fa-shopping-basket" aria-hidden="true" /></a>
                                     <a href="#" className="wishlist-link"><i className="fa fa-heart" aria-hidden="true" /></a>
@@ -216,7 +219,7 @@ export default class ProductTab extends Component {
                                     </div>
                                 </div>
                                 <div className="product-info">
-                                    <h3 className="product-title"><a href="detail.html">new favorite</a></h3>
+                                    <h3 className="product-title"><a href="details.js">new favorite</a></h3>
                                     <div className="product-price">
                                     <del><span>$400.00</span></del>
                                     <ins><span>$360.00</span></ins>
@@ -231,10 +234,10 @@ export default class ProductTab extends Component {
                             <div className="clearfix">
                                 <div className="item-product-ajax item-product">
                                 <div className="product-thumb">
-                                    <a href="detail.html" className="product-thumb-link">
+                                    <a href="details.js" className="product-thumb-link">
                                     <img src="images/photos/homeware/1.jpg" alt />
                                     </a>
-                                    <a href="quick-view.html" className="quickview-link plus fancybox.iframe">quick view</a>
+                                    <a href="quick-views.js" className="quickview-link plus fancybox.iframe">quick view</a>
                                     <div className="product-extra-link">
                                     <a href="#" className="addcart-link"><i className="fa fa-shopping-basket" aria-hidden="true" /></a>
                                     <a href="#" className="wishlist-link"><i className="fa fa-heart" aria-hidden="true" /></a>
@@ -242,7 +245,7 @@ export default class ProductTab extends Component {
                                     </div>
                                 </div>
                                 <div className="product-info">
-                                    <h3 className="product-title"><a href="detail.html">new favorite</a></h3>
+                                    <h3 className="product-title"><a href="details.js">new favorite</a></h3>
                                     <div className="product-price">
                                     <del><span>$400.00</span></del>
                                     <ins><span>$360.00</span></ins>
@@ -251,10 +254,10 @@ export default class ProductTab extends Component {
                                 </div>
                                 <div className="item-product-ajax item-product">
                                 <div className="product-thumb">
-                                    <a href="detail.html" className="product-thumb-link">
+                                    <a href="details.js" className="product-thumb-link">
                                     <img src="images/photos/homeware/2.jpg" alt />
                                     </a>
-                                    <a href="quick-view.html" className="quickview-link plus fancybox.iframe">quick view</a>
+                                    <a href="quick-views.js" className="quickview-link plus fancybox.iframe">quick view</a>
                                     <div className="product-extra-link">
                                     <a href="#" className="addcart-link"><i className="fa fa-shopping-basket" aria-hidden="true" /></a>
                                     <a href="#" className="wishlist-link"><i className="fa fa-heart" aria-hidden="true" /></a>
@@ -262,7 +265,7 @@ export default class ProductTab extends Component {
                                     </div>
                                 </div>
                                 <div className="product-info">
-                                    <h3 className="product-title"><a href="detail.html">new favorite</a></h3>
+                                    <h3 className="product-title"><a href="details.js">new favorite</a></h3>
                                     <div className="product-price">
                                     <del><span>$400.00</span></del>
                                     <ins><span>$360.00</span></ins>
@@ -271,10 +274,10 @@ export default class ProductTab extends Component {
                                 </div>
                                 <div className="item-product-ajax item-product">
                                 <div className="product-thumb">
-                                    <a href="detail.html" className="product-thumb-link">
+                                    <a href="details.js" className="product-thumb-link">
                                     <img src="images/photos/homeware/10.jpg" alt />
                                     </a>
-                                    <a href="quick-view.html" className="quickview-link plus fancybox.iframe">quick view</a>
+                                    <a href="quick-views.js" className="quickview-link plus fancybox.iframe">quick view</a>
                                     <div className="product-extra-link">
                                     <a href="#" className="addcart-link"><i className="fa fa-shopping-basket" aria-hidden="true" /></a>
                                     <a href="#" className="wishlist-link"><i className="fa fa-heart" aria-hidden="true" /></a>
@@ -282,7 +285,7 @@ export default class ProductTab extends Component {
                                     </div>
                                 </div>
                                 <div className="product-info">
-                                    <h3 className="product-title"><a href="detail.html">new favorite</a></h3>
+                                    <h3 className="product-title"><a href="details.js">new favorite</a></h3>
                                     <div className="product-price">
                                     <del><span>$400.00</span></del>
                                     <ins><span>$360.00</span></ins>
@@ -291,10 +294,10 @@ export default class ProductTab extends Component {
                                 </div>
                                 <div className="item-product-ajax item-product">
                                 <div className="product-thumb">
-                                    <a href="detail.html" className="product-thumb-link">
+                                    <a href="details.js" className="product-thumb-link">
                                     <img src="images/photos/homeware/3.jpg" alt />
                                     </a>
-                                    <a href="quick-view.html" className="quickview-link plus fancybox.iframe">quick view</a>
+                                    <a href="quick-views.js" className="quickview-link plus fancybox.iframe">quick view</a>
                                     <div className="product-extra-link">
                                     <a href="#" className="addcart-link"><i className="fa fa-shopping-basket" aria-hidden="true" /></a>
                                     <a href="#" className="wishlist-link"><i className="fa fa-heart" aria-hidden="true" /></a>
@@ -302,7 +305,7 @@ export default class ProductTab extends Component {
                                     </div>
                                 </div>
                                 <div className="product-info">
-                                    <h3 className="product-title"><a href="detail.html">new favorite</a></h3>
+                                    <h3 className="product-title"><a href="details.js">new favorite</a></h3>
                                     <div className="product-price">
                                     <del><span>$400.00</span></del>
                                     <ins><span>$360.00</span></ins>
@@ -311,10 +314,10 @@ export default class ProductTab extends Component {
                                 </div>
                                 <div className="item-product-ajax item-product">
                                 <div className="product-thumb">
-                                    <a href="detail.html" className="product-thumb-link">
+                                    <a href="details.js" className="product-thumb-link">
                                     <img src="images/photos/homeware/4.jpg" alt />
                                     </a>
-                                    <a href="quick-view.html" className="quickview-link plus fancybox.iframe">quick view</a>
+                                    <a href="quick-views.js" className="quickview-link plus fancybox.iframe">quick view</a>
                                     <div className="product-extra-link">
                                     <a href="#" className="addcart-link"><i className="fa fa-shopping-basket" aria-hidden="true" /></a>
                                     <a href="#" className="wishlist-link"><i className="fa fa-heart" aria-hidden="true" /></a>
@@ -322,7 +325,7 @@ export default class ProductTab extends Component {
                                     </div>
                                 </div>
                                 <div className="product-info">
-                                    <h3 className="product-title"><a href="detail.html">new favorite</a></h3>
+                                    <h3 className="product-title"><a href="details.js">new favorite</a></h3>
                                     <div className="product-price">
                                     <del><span>$400.00</span></del>
                                     <ins><span>$360.00</span></ins>
@@ -337,10 +340,10 @@ export default class ProductTab extends Component {
                             <div className="clearfix">
                                 <div className="item-product-ajax item-product">
                                 <div className="product-thumb">
-                                    <a href="detail.html" className="product-thumb-link">
+                                    <a href="details.js" className="product-thumb-link">
                                     <img src="images/photos/sport/1.jpg" alt />
                                     </a>
-                                    <a href="quick-view.html" className="quickview-link plus fancybox.iframe">quick view</a>
+                                    <a href="quick-views.js" className="quickview-link plus fancybox.iframe">quick view</a>
                                     <div className="product-extra-link">
                                     <a href="#" className="addcart-link"><i className="fa fa-shopping-basket" aria-hidden="true" /></a>
                                     <a href="#" className="wishlist-link"><i className="fa fa-heart" aria-hidden="true" /></a>
@@ -348,7 +351,7 @@ export default class ProductTab extends Component {
                                     </div>
                                 </div>
                                 <div className="product-info">
-                                    <h3 className="product-title"><a href="detail.html">new favorite</a></h3>
+                                    <h3 className="product-title"><a href="details.js">new favorite</a></h3>
                                     <div className="product-price">
                                     <del><span>$400.00</span></del>
                                     <ins><span>$360.00</span></ins>
@@ -357,10 +360,10 @@ export default class ProductTab extends Component {
                                 </div>
                                 <div className="item-product-ajax item-product">
                                 <div className="product-thumb">
-                                    <a href="detail.html" className="product-thumb-link">
+                                    <a href="details.js" className="product-thumb-link">
                                     <img src="images/photos/sport/2.jpg" alt />
                                     </a>
-                                    <a href="quick-view.html" className="quickview-link plus fancybox.iframe">quick view</a>
+                                    <a href="quick-views.js" className="quickview-link plus fancybox.iframe">quick view</a>
                                     <div className="product-extra-link">
                                     <a href="#" className="addcart-link"><i className="fa fa-shopping-basket" aria-hidden="true" /></a>
                                     <a href="#" className="wishlist-link"><i className="fa fa-heart" aria-hidden="true" /></a>
@@ -368,7 +371,7 @@ export default class ProductTab extends Component {
                                     </div>
                                 </div>
                                 <div className="product-info">
-                                    <h3 className="product-title"><a href="detail.html">new favorite</a></h3>
+                                    <h3 className="product-title"><a href="details.js">new favorite</a></h3>
                                     <div className="product-price">
                                     <del><span>$400.00</span></del>
                                     <ins><span>$360.00</span></ins>
@@ -377,10 +380,10 @@ export default class ProductTab extends Component {
                                 </div>
                                 <div className="item-product-ajax item-product">
                                 <div className="product-thumb">
-                                    <a href="detail.html" className="product-thumb-link">
+                                    <a href="details.js" className="product-thumb-link">
                                     <img src="images/photos/sport/10.jpg" alt />
                                     </a>
-                                    <a href="quick-view.html" className="quickview-link plus fancybox.iframe">quick view</a>
+                                    <a href="quick-views.js" className="quickview-link plus fancybox.iframe">quick view</a>
                                     <div className="product-extra-link">
                                     <a href="#" className="addcart-link"><i className="fa fa-shopping-basket" aria-hidden="true" /></a>
                                     <a href="#" className="wishlist-link"><i className="fa fa-heart" aria-hidden="true" /></a>
@@ -388,7 +391,7 @@ export default class ProductTab extends Component {
                                     </div>
                                 </div>
                                 <div className="product-info">
-                                    <h3 className="product-title"><a href="detail.html">new favorite</a></h3>
+                                    <h3 className="product-title"><a href="details.js">new favorite</a></h3>
                                     <div className="product-price">
                                     <del><span>$400.00</span></del>
                                     <ins><span>$360.00</span></ins>
@@ -397,10 +400,10 @@ export default class ProductTab extends Component {
                                 </div>
                                 <div className="item-product-ajax item-product">
                                 <div className="product-thumb">
-                                    <a href="detail.html" className="product-thumb-link">
+                                    <a href="details.js" className="product-thumb-link">
                                     <img src="images/photos/sport/3.jpg" alt />
                                     </a>
-                                    <a href="quick-view.html" className="quickview-link plus fancybox.iframe">quick view</a>
+                                    <a href="quick-views.js" className="quickview-link plus fancybox.iframe">quick view</a>
                                     <div className="product-extra-link">
                                     <a href="#" className="addcart-link"><i className="fa fa-shopping-basket" aria-hidden="true" /></a>
                                     <a href="#" className="wishlist-link"><i className="fa fa-heart" aria-hidden="true" /></a>
@@ -408,7 +411,7 @@ export default class ProductTab extends Component {
                                     </div>
                                 </div>
                                 <div className="product-info">
-                                    <h3 className="product-title"><a href="detail.html">new favorite</a></h3>
+                                    <h3 className="product-title"><a href="details.js">new favorite</a></h3>
                                     <div className="product-price">
                                     <del><span>$400.00</span></del>
                                     <ins><span>$360.00</span></ins>
@@ -417,10 +420,10 @@ export default class ProductTab extends Component {
                                 </div>
                                 <div className="item-product-ajax item-product">
                                 <div className="product-thumb">
-                                    <a href="detail.html" className="product-thumb-link">
+                                    <a href="details.js" className="product-thumb-link">
                                     <img src="images/photos/sport/4.jpg" alt />
                                     </a>
-                                    <a href="quick-view.html" className="quickview-link plus fancybox.iframe">quick view</a>
+                                    <a href="quick-views.js" className="quickview-link plus fancybox.iframe">quick view</a>
                                     <div className="product-extra-link">
                                     <a href="#" className="addcart-link"><i className="fa fa-shopping-basket" aria-hidden="true" /></a>
                                     <a href="#" className="wishlist-link"><i className="fa fa-heart" aria-hidden="true" /></a>
@@ -428,7 +431,7 @@ export default class ProductTab extends Component {
                                     </div>
                                 </div>
                                 <div className="product-info">
-                                    <h3 className="product-title"><a href="detail.html">new favorite</a></h3>
+                                    <h3 className="product-title"><a href="details.js">new favorite</a></h3>
                                     <div className="product-price">
                                     <del><span>$400.00</span></del>
                                     <ins><span>$360.00</span></ins>

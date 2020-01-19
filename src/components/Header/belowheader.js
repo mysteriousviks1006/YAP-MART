@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 
 export default class BelowHeader extends Component {
     render() {
@@ -10,7 +11,7 @@ export default class BelowHeader extends Component {
                         <div className="col-md-3 col-sm-3 col-xs-12">
                             <div className="logo logo4">
                             <h1 className="hidden">yap mart </h1>
-                            <a href="index.html"><img src="images/logo.png" alt /></a>
+                            <Link to="/"><img src="images/logo.png" alt /></Link>
                             </div>
                         </div>
                         <div className="col-md-6 col-sm-6 col-xs-12">
@@ -19,16 +20,16 @@ export default class BelowHeader extends Component {
                                 <a className="category-toggle-link" href="#"><span>All Categories</span></a>
                                 <ul className="list-category-toggle list-unstyled">
                                 <li><a href="#">Computer &amp; Office</a></li>
-                                <li><a href="#">Elextronics</a></li>
-                                <li><a href="#">Jewelry &amp; Watches</a></li>
+                                <li><a href="#">Electronics</a></li>
+                                <li><a href="#">Jewellery &amp; Watches</a></li>
                                 <li><a href="#">Home &amp; Garden</a></li>
                                 <li><a href="#">Bags &amp; Shoes</a></li>
                                 <li><a href="#">Kids &amp; Baby</a></li>
                                 </ul>
                             </div>
                             <form className="smart-search-form ajax-search">
-                                <input type="text" onblur="if (this.value=='') this.value = this.defaultValue" onfocus="if (this.value==this.defaultValue) this.value = ''" defaultValue="Search..." />
-                                <input type="submit" defaultValue />
+                                <input type="text" onblur="if (this.value=='') this.value = this.defaultValue" onfocus="if (this.value==this.defaultValue) this.value = ''" placeholder="Search..." />
+                                <input type="submit" Value = "" />
                                 <div className="list-product-search">
                                 <div className="item-search-pro">
                                     <div className="search-ajax-thumb product-thumb">

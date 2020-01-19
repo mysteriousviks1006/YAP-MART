@@ -14,7 +14,6 @@ export default class Details extends Component {
                 <MainDetail />
                 <Footer />
                 <LocationAcceptor />
-
             </div>
         )
     }

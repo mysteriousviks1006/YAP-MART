@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import {Link} from 'react-router-dom';
 
 class Header extends Component{
     render()
@@ -12,9 +13,10 @@ class Header extends Component{
                         <div className="row">
                         <div className="col-md-6 col-sm-6 col-xs-12">
                             <div className="account-login">
-                            <a href="#">My Account</a>
-                            <a href="#">Login</a>
-                            <a href="#">Register</a>
+                            <Link to="/profile">My Account</Link>
+                            <Link to="/login">Login</Link>
+                            <Link to="/register">Register</Link>
+                            <Link to='/about'>About Us</Link>
                             </div>
                         </div>
                         <div className="col-md-6 col-sm-6 hidden-xs">

@@ -9,15 +9,15 @@ class LocationAcceptor extends Component {
                         <div className="window-popup text-center"> 
                         <div className="content-popup">
                             <a href="#" className="close-popup color"><i className="fa fa-times" aria-hidden="true" /></a>
-                            <h2 className="title30">Receive</h2>
-                            <h2 className="title30">newsletters</h2>
+                            <h2 className="title30">Enter</h2>
+                            <h2 className="title30">Your Location</h2>
                             <h3 className="title18">To not miss a good deal</h3>
                             <img src="images/shop/popup.jpg" alt className="image-popup" />
                             <form>
                             <input type="text" defaultValue="Enter Your Email..." onfocus="if (this.value==this.defaultValue) this.value = ''" onblur="if (this.value=='') this.value = this.defaultValue" />
                             <select className="select-location text-left">
                                 <option value>--- Select your city ---</option>
-                                <option value>Los Angeles</option>
+                                <option value>MUMBAI</option>
                                 <option value>Chicago</option>
                                 <option value>San Francisco</option>
                                 <option value>Dallas</option>
